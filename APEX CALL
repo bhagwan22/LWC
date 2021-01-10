@@ -9,3 +9,12 @@
                 
 2. Imperative way of calling:
                 a. call apex method inside the js method that returns a js promiss
+                
+        ___________________________________________________________________________________________________________________________________________________________
+        
+IMPORTANT TO KNOW
+-----------------
+1. Use the Continuation class in Apex to make a long-running request to an external Web service.
+Continuations use the @AuraEnabled annotation. 
+Ex: @AuraEnabled(Continuation=true cacheable=true)
+
