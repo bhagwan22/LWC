@@ -1,1 +1,11 @@
 
+# TWO WAYS
+  1. use @wire service
+  2. Imperative
+  
+1. @wire service:
+                a. apex method need to have cacheable=true
+                b. in js @wire can be link to property or method
+                
+2. Imperative way of calling:
+                a. call apex method inside the js method that returns a js promiss
