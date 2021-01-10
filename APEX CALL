@@ -10,6 +10,17 @@
 2. Imperative way of calling:
                 a. call apex method inside the js method that returns a js promiss
                 
+                  example:
+                    //JS METHOD
+                    handleChange(){
+                        getContactList().then(return=>{
+                          //SUCCESS RESULT ITERATION on return
+                          // this.contacts=result;
+                        }).catch(error=>{
+                          // ITERATE ON error FOR ERROR
+                        });
+                    }
+                
         ___________________________________________________________________________________________________________________________________________________________
         
 IMPORTANT TO KNOW
