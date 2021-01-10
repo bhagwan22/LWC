@@ -7,6 +7,17 @@
                 a. apex method need to have cacheable=true
                 b. in js @wire can be link to property or method
                 
+                example:
+                        //  wire apex method to a function for processing before giving to markup
+                        @wire(getContactList)wiredContacts({error,data}){
+                          if(data){
+                            //ITERATE FOR RETURN VALUE IN data
+                          }
+                          else if(error){
+                            //ITERATE FOR ERROR 
+                          }
+                        }
+                
 2. Imperative way of calling:
                 a. call apex method inside the js method that returns a js promiss
                 
