@@ -4,12 +4,16 @@
   2. Imperative
   
 1. @wire service:
+─────────────────
                 a. apex method need to have cacheable=true
                 b. in js @wire can be link to property or method
                 
                 example:
-                        //  wire apex method to a function for processing before giving to markup
-                        @wire(getContactList)wiredContacts({error,data}){
+                
+                        import getContactList from '@salesforce/apex/controllerClass.giveContactDetailMethodName';\
+                        
+                        //  WIRE APEX METHOD ON FUNCTION AND PASS PARAMETER ***
+                        @wire(getContactList,{paramaterName1:paramaterValue1}) handlerMethodName({error,data}){
                           if(data){
                             //ITERATE FOR RETURN VALUE IN data
                           }
@@ -19,6 +23,7 @@
                         }
                 
 2. Imperative way of calling:
+─────────────────────────────
                 a. call apex method inside the js method that returns a js promiss
                 
                   example:
