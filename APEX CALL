@@ -29,10 +29,10 @@
                   example:
                     //JS METHOD
                     handleChange(){
-                        getContactList({parameterName1:parameterValue1}).then(return=>{
+                        getContactList({parameterName1:parameterValue1}).then((return)=>{
                           //SUCCESS RESULT ITERATION on return
                           // this.contacts=result;
-                        }).catch(error=>{
+                        }).catch((error)=>{
                           // ITERATE ON error FOR ERROR
                         });
                     }
