@@ -3,6 +3,6 @@
 # 2. public property and fundtion: if sender is PARENT and receiver is CHILD
 
 # Lighnting message service: 
-for sibling component OR combination of 1 and 2 if parent compoent is our build so one can send event to parent and second component can use public proberty of parent.
+for sibling(i.e common ancestor) component OR combination of 1 and 2 if parent compoent is our build so one can send event to parent and second component can use public proberty of parent.
 
-
+# Pub- sub: if there are two independent component and no common ancestor that we have created then we use pub-sub
