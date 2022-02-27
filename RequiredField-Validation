@@ -1,0 +1,21 @@
+// CHECK IF ALL REQUIRED FIELD ARE FILLED**
+handleSave(event){
+        console.log('@@@@@@@@ SAVE CALLED ');
+        // const emailFieldRef = this.template.querySelector('.emailCls');
+        // const isvalid = emailFieldRef.reportValidity();
+        // console.log('####@@ email report valid=> '+isvalid);
+        
+        const isInputsCorrect = [...this.template.querySelectorAll('lightning-input')]
+            .reduce((previousItemResult, currentInputField) => {
+                currentInputField.reportValidity();
+                console.log('@@@@@  FIELD CHECK1 => '+currentInputField.name);
+                console.log('@@@@# previousItemResult ');
+                console.log(previousItemResult);
+                return previousItemResult && currentInputField.checkValidity();
+            }, true);//true is default value for first previousItemResult
+        if (isInputsCorrect) {
+         //perform success logic
+            console.log('@@@@@ ALL FIELD SET ');
+        }
+
+    }
