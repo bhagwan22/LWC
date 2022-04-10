@@ -1,0 +1,49 @@
+<template>
+    <div class="bs-header slds-page-header">
+        <lightning-layout>
+            <lightning-layout-item class="slds-m-around_small">
+                <lightning-icon icon-name="custom:custom1"></lightning-icon>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="grow">
+                <span class="slds-m-top_small slds-page-header__title">{headder}</span>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+
+    <div class="slds-card slds-m-around_large">
+        <template for:each={inputList} for:item="row">
+            <lightning-layout key={row.srNo}>
+                <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                    padding="around-small">
+                    <lightning-formatted-number value={row.sNo} class="topMargin"></lightning-formatted-number>
+                    <!-- <lightning-input label="Name" name="Name" value={row.cName}></lightning-input> -->
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                    padding="around-small">
+                    <lightning-input label="Name" name="Name" value={row.conName}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                    padding="around-small">
+                    <lightning-input label="Email" type="email" name="Email" value={row.conEmail}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                    padding="around-small">
+                    <lightning-input label="Country" name="Country" value={row.conCountry}></lightning-input>
+                </lightning-layout-item>
+                <!-- action icon  -->
+                <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2">
+                    <lightning-icon icon-name="action:new" alternative-text="new" size="x-small" class="topMargin"
+                        onclick={handleAdd}>
+                    </lightning-icon>
+                    &nbsp;
+                    <lightning-icon if:true={row.render} icon-name="action:delete" alternative-text="delete"
+                        size="x-small" class="topMargin" access-key={row.sNo} onclick={handleRemove}></lightning-icon>
+                    &nbsp;
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+    </div>
+
+
+
+</template>
