@@ -1,5 +1,8 @@
-> ## this.dispatchEvent(new CustomEvent('buttonclick',{detail:'test', bubbles:true, composed: true}));
+```
+  this.dispatchEvent(new CustomEvent('buttonclick',{detail:'test', bubbles:true, composed: true}));
+```
 > composed: allow to propogate up the DOM tree from parent to grandparent
+
 > bubble: propogate up in parent DOM
 
 LWC dosn't support event capture: Lightning web components use only the bubbling phase. Dispatching events or adding listeners to the capture phase isn't supported.
