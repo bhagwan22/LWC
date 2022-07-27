@@ -3,7 +3,7 @@
 ```
 > composed: allow to propogate up the DOM tree from parent to grandparent
 
-> bubble: propogate up in parent DOM
+> bubble: propogate up to the element’s ancestors inside the template only. When the event reaches the shadow boundary, it stops.
 
 LWC dosn't support event capture: Lightning web components use only the bubbling phase. Dispatching events or adding listeners to the capture phase isn't supported.
 i.e event path as start with your component and then moving to it's parent and grand parent.
