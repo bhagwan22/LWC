@@ -44,5 +44,6 @@
 # LWC when component in removed
  - parent removed from DOM
  - disconnectedCallback on parent
+   - used for purging/removing cache, removing event listner 	
  - child Removed form Dom
  - disconnectedCallback on child
