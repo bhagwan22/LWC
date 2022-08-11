@@ -16,6 +16,11 @@
  - parent public property update(if needed)
  - parent insert into DOM
  - connectedCallback() on parent
+    - Basicly used for
+      - establish communication
+      - initialization tasks(fetch data, set up caches, or listen for events)
+      - Subscribe or Unsubscribe to messaging channel
+ 	 	
       ```
         connectedCallback() {
                  super();
