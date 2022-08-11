@@ -41,6 +41,9 @@
    - call after component finish rendering phase
    - here all expressions used in the template are reevaluated 	
      - Note: render callback call everytime a property value changes
+     - Don’t update a public property or field in renderedCallback(). // cause infinite loop
+     - Don’t update a wire adapter configuration object property in renderedCallback()  // cause infinite loop
+     
  - RenderedCallback on parent
 
 
