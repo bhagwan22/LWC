@@ -15,13 +15,14 @@
       
  - parent public property update(if needed)
  - parent insert into DOM
-      connectedCallback() on parent
+ - connectedCallback() on parent
       ```
         connectedCallback() {
                  super();
                    this.classList.add('new-class');
               }
       ```
+      **Note** : we can not access child component from parent connectedcallback(since not exist yet), Access host element by this, Access elements in the component template use this.template
       
  - Parent rendered
  - constructor call in CHild
