@@ -37,7 +37,10 @@
  - Child Inserted into DOM
  - connected Callback on child
  - child rendered
- - RenderedCallback on child
+ - RenderedCallback on child // run if change in component property(fields)
+   - call after component finish rendering phase
+   - here all expressions used in the template are reevaluated 	
+     - Note: render callback call everytime a property value changes
  - RenderedCallback on parent
 
 
