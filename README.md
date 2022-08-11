@@ -16,6 +16,8 @@
  - parent public property update(if needed)
  - parent insert into DOM
  - connectedCallback() on parent
+    - this hook can fire more than one time. 
+      -	For example, if you remove an element and then insert it into another position, such as when you reorder a list, the hook fires several times. 
     - Basicly used for
       - establish communication
       - initialization tasks(fetch data, set up caches, or listen for events)
