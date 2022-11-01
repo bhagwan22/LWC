@@ -70,7 +70,7 @@
 # js 
 ```
 import { LightningElement, track, wire, api } from "lwc";
-  import findRecords from "@salesforce/apex/Coacto_LwcLookupController.findRecords";
+  import findRecords from "@salesforce/apex/LwcLookupController.findRecords";
   export default class LwcLookup extends LightningElement {
   @track recordsList;
   @track searchKey = "";
@@ -136,7 +136,7 @@ import { LightningElement, track, wire, api } from "lwc";
 
 # Apex
 ```
-public with sharing class Coacto_LwcLookupController {
+public with sharing class LwcLookupController {
     @AuraEnabled(cacheable=true)
     public static List<sobject> findRecords(String searchKey, String objectName, boolean userRoleWise) {
       string searchText = '\'' + String.escapeSingleQuotes(searchKey) + '%\'';
